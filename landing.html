@@ -32,64 +32,9 @@
         }
 
         header h1 span {
-            color: #4fd1c5; /* Accent color */
+            color: #4fd1c5;
         }
         
-        nav {
-            margin-top: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffdd57;
-            font-weight: bold;
-            font-size: 1em;
-        }
-
-        nav ul li a:hover {
-            color: #ffd23f;
-        }
-
-        form {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        form input {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 250px;
-        }
-
-        form button {
-            padding: 10px;
-            font-size: 1em;
-            background-color: #ffdd57;
-            color: #1a202c;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #ffd23f;
-        }
-
         main {
             padding: 20px;
             max-width: 1200px;
@@ -109,27 +54,22 @@
             margin-top: 0;
         }
 
-        section p {
-            font-size: 1em;
-            margin-bottom: 15px;
-        }
-
-        .aircraft-list {
+        section ul {
             list-style: none;
             padding: 0;
         }
 
-        .aircraft-list li {
+        section ul li {
             margin: 10px 0;
         }
 
-        .aircraft-list a {
+        section ul li a {
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
         }
 
-        .aircraft-list a:hover {
+        section ul li a:hover {
             text-decoration: underline;
         }
 
@@ -140,250 +80,63 @@
             padding: 15px;
             margin-top: 20px;
         }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            nav ul {
-                gap: 5px;
-            }
-
-            nav ul li a {
-                font-size: 0.9em;
-            }
-
-            form input {
-                width: 200px;
-                font-size: 0.9em;
-            }
-
-            form button {
-                font-size: 0.9em;
-                padding: 8px;
-            }
-
-            section h2 {
-                font-size: 1.3em;
-            }
-
-            section p {
-                font-size: 0.9em;
-            }
-
-            .aircraft-list a {
-                font-size: 0.9em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            form {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            form input {
-                width: 100%;
-            }
-
-            form button {
-                width: 100%;
-            }
-        }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Welcome to FlightBinder</h1>
-        </nav>
-        <form id="search-form" onsubmit="return false;">
-            <input type="text" id="search-bar" placeholder="search field etc...." oninput="searchAircrafts()">
-        </form>
-
-        <!-- Dropdown Menu (you can add more options here, just follow same format.)-->
-        <div class="dropdown">
-            <select id="aircraft-dropdown" onchange="filterAircraftsByManufacturer()">
-                <option value="all">All Manufacturers</option>
-                <option value="#airbus">Airbus</option>
-                <option value="#beachcraft">Beachcraft</option>
-                <option value="#boeing">Boeing</option>
-                <option value="#bombardier">Bombardier</option>
-                <option value="#cessna">Cessna</option>
-                <option value="#cirrus">Cirrus</option>
-                <option value="#embraer">Embraer</option>
-                <option value="#lockheed">Lockheed Martin</option>
-            </select>
-        </div>
+        <h1>FlightBinder by: <span>Addisen and Alex</span></h1>
     </header>
-
-    <!-- Checklists below. Follow same format if adding new ones.-->
     
-    <main>  
-        <section id="airbus">
-            <h2>Airbus Aircraft Checklists</h2>
-            <p>View Airbus checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://filbertflies.com/wp-content/uploads/2022/11/A310-Flows-V2.pdf" target="_blank">Airbus A310 Checklist</a></li>
-                <li><a href="https://www.flusi.info/index.php?attachment/10841-airbus-a319-321-pdf/" target="_blank">Airbus A319 Checklist</a></li>
-                <li><a href="https://www.scribd.com/document/739682403/Airbus-a220-Normal-Checklist" target="_blank">Airbus A220 Checklist</a></li>
-                <li><a href="https://flyuk.aero/assets/downloads/resources/checklists/UKV-PRD-A320-CHECKLIST-V5.pdf" target="_blank">Airbus A320 Checklist</a></li>
-                <li><a href="https://www.theairlinepilots.com/forumarchive/a320/a320-abnormal-procedures.pdf">EMERGENCY Airbus A320 Checklist</a></li>
-                <li><a href="https://www.flight-office.com/xplane/Checklist.pdf" target="_blank">Airbus A330 Checklist</a></li>
-                <li><a href="https://pdfupload.io/docs/75a0fc2a" target="_blank">Airbus A340 Checklist</a></li>
-                <li><a href="https://simmerdream.com/wp-content/uploads/2020/12/A350-CHECKLIST.pdf" target="_blank">Airbus A350 Checklist</a></li>
-                <li><a href="https://flightsim.to/file/84091/airbus-a380-step-by-step-checklist-as-pdf" target="_blank">Airbus A380 Checklist</a></li>
-            </ul>
-        </section>
-
-        <section id="beachcraft">
-            <h2>Beachcraft Aircraft Checklists</h2>
-            <p>View Beachcraft checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://www.flugsimulation-vfr.ch/view/data/7711/PDF/Checklist%20King%20Air%20350.pdf">King Air 360ER</a></li>
-                <li><a href="https://updates.simcoders.com/release/Laminar-B58/REP-b58-checklists-references.pdf">Baron 58</a></li>
+    <main>
+        <section>
+            <h2>Emergency Procedures</h2>
+            
+            <div class="section">
+                <h2>Fire Emergency</h2>
+                <ul>
+                    <li>Remain calm and do not panic.</li>
+                    <li>Activate the nearest fire alarm.</li>
+                    <li>Evacuate the building using the nearest exit.</li>
+                    <li>Do not use elevators.</li>
+                    <li>Call emergency services at 000.</li>
+                    <li><a href="#">Fire Emergency Checklist</a></li>
                 </ul>
-            </section>
-
-        <section id="boeing">
-            <h2>Boeing Aircraft Checklists</h2>
-            <p>View Boeing checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://www.atlanticsunairways.com/training/checklist_b727f.pdf" target="_blank">Boeing 727 Checklist</a></li>
-                <li><a href="https://flyuk.aero/assets/downloads/resources/checklists/UKV-PRD-B737-CHECKLIST-V2.pdf" target="_blank">Boeing 737 Checklist</a></li>
-                <li><a href="https://flyuk.aero/assets/downloads/resources/checklists/UKV-PRD-B777-CHECKLIST-V2.pdf" target="_blank">Boeing 777 Checklist</a></li>
-                <li><a href="https://virtualual.com/lib/downloads/vUAL_787_Checklist.pdf" target="_blank">Boeing 787 Checklist</a></li>
-                <li><a href="https://www.onebag.com/popups/747checklist.pdf" target="_blank">Boeing 747 Checklist</a></li>
-            </ul>
-        </section>
-
-        <section id="bombardier">
-            <h2>Bombardier Aircraft Checklists</h2>
-            <p>View Bombardier checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://www.scribd.com/document/509106764/Bombardier-CRJ-Series-Normal-Checklist-For-Flight-Crew" target="_blank">Bombardier CRJ900 Checklist</a></li>
-                <li><a href="https://www.scribd.com/document/509106764/Bombardier-CRJ-Series-Normal-Checklist-For-Flight-Crewf" target="_blank">Bombardier CSeries Checklist</a></li>
-                <li><a href="https://flyuk.aero/assets/downloads/resources/checklists/UKV-PRD-DASH8%20Q400-CHECKLIST-V1.pdf" target="_blank">Bombardier Dash-8-Q400 Checklist</a></li>
-            </ul>
-        </section>
-
-        <section id="cessna">
-            <h2>Cessna Aircraft Checklists</h2>
-            <p>View Cessna checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://www.mentoneflyingclub.org/aircraft/12874_CL.pdf" target="_blank">Cessna 172 Checklist</a></li>
-                <li><a href="https://www.aerodynamicaviation.com/wp-content/uploads/2023/05/C150-preflight-emergency-checklist-2023.pdf" target="_blank">Cessna 150 Checklist</a></li>
-                <li><a href="https://ewhitecap.com/files/Citation%20X%20checklist-v2.03.pdf" target="_blank">Cessna Citation X Checklist</a></li>
-                <li><a href="https://blueskyaviation.cz/wp-content/uploads/2023/12/350-NormalChecklist.pdf" target="_blank">Cessna 350</a></li>
-            </ul>
-        </section>
-
-        <section id="Cirrus">
-            <h2>Cirrus Aircraft Checklists</h2>
-            <p>View Cirrus checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="http://inetefb.com/CheckLists/SR22%20G3%20Turbo%20Checklist.pdf">Cirrus SR22/SR20</a></li>
-                <li><a href="https://pdfupload.io/docs/83cbd262">Cirrus SF50</a></li>
-            </ul>
-        </section>
-
-        <section id="embraer">
-            <h2>Embraer Aircraft Checklists</h2>
-            <p>View Embraer checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://www.carstenrau.de/diverses/ivao/Checklist-E-Jets-Wilco-E-Jet-Series.pdf" target="_blank">Embraer 170 Checklist</a></li>
-                <li><a href="https://pdfupload.io/docs/d63a9532" target="_blank">Embraer 190 Checklist</a></li>
-                <li><a href="https://pdfupload.io/docs/d63a9532" target="_blank">Embraer L1000 Checklist</a></li>
-            </ul>
-        </section>
-
-        <section id="lockheed">
-            <h2>Lockheed Martin Aircraft Checklists</h2>
-            <p>View Lockheed Martin checklists:</p>
-            <ul class="aircraft-list">
-                <li><a href="https://pdfupload.io/docs/0039c441" target="_blank">Lockheed C-130 Checklist</a></li>
-                <li><a href="https://pdfupload.io/docs/793f176c" target="_blank">Lockheed F-35 Checklist</a></li>
-                <li><a href="https://www.msfs2020.de/index.php?attachment/7102-jds-cl-f-35-lightning-ii-1-0-9-1-26-2-pdf/" target="_blank">Lockheed F-35 Lightning II Checklist</a></li>
-            </ul>
-        </section>
-
-        <section id="test">
-            <h2>test aircraft</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas similique possimus tempore quis! Maiores sunt saepe laudantium ullam dolore esse, nobis consequatur, necessitatibus provident dolorem voluptatum pariatur explicabo facilis assumenda.</p>
-            <ul class="aircraft-list">
-                <li><a href="https://google.com">Test link</a></li>
-            </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Medical Emergency</h2>
+                <ul>
+                    <li>Call emergency services at 000.</li>
+                    <li>Provide first aid if trained.</li>
+                    <li>Stay with the injured person until help arrives.</li>
+                    <li><a href="#">Medical Emergency Checklist</a></li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Severe Weather</h2>
+                <ul>
+                    <li>Seek shelter indoors.</li>
+                    <li>Avoid windows and glass doors.</li>
+                    <li>Follow local weather updates.</li>
+                    <li><a href="#">Severe Weather Checklist</a></li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Lockdown Procedure</h2>
+                <ul>
+                    <li>Remain indoors and lock doors.</li>
+                    <li>Turn off lights and stay quiet.</li>
+                    <li>Follow instructions from authorities.</li>
+                    <li><a href="#">Lockdown Procedure Checklist</a></li>
+                </ul>
+            </div>
         </section>
     </main>
-
+    
     <footer>
-        &copy; 2024 FlightBinder by: Addisen and Alex | All rights reserved | Not for real-world aviation use.
+        <p>&copy; 2025 FlightBinder. All rights reserved.</p>
     </footer>
-
-    <script>
-        // script for drop down menu
-
-        function filterAircraftsByManufacturer() {
-            const dropdown = document.getElementById("aircraft-dropdown");
-            const selectedValue = dropdown.value;
-            const sections = document.querySelectorAll("section");
-
-            sections.forEach(section => {
-                if (selectedValue === "all" || section.id === selectedValue.substring(1)) {
-                    section.style.display = "block";
-                } else {
-                    section.style.display = "none";
-                }
-            });
-        }
-        
-        // js searches for aircraft... only aircraft manufacturer
-        function searchAircrafts() {
-            const searchTerm = document.getElementById("search-bar").value.toLowerCase();
-            const sections = document.querySelectorAll("section");
-
-            // filter for search.
-            sections.forEach(section => {
-                const listItems = section.querySelectorAll("ul.aircraft-list li");
-                let matchFound = false;
-            
-                // dispalys search results
-                
-                listItems.forEach(item => {
-                    const linkText = item.textContent.toLowerCase();
-                    if (linkText.includes(searchTerm)) {
-                        item.style.display = "block"; // shows matches for search term
-                        matchFound = true;
-                    } else {
-                        item.style.display = "none"; // hides anything that doesn't match search term
-                    }
-                });
-
-                // no matches will show blank
-                if (!matchFound) {
-                    section.style.display = "none";
-                } else {
-                    section.style.display = "block";
-                }
-            });
-        }
-    </script>
-
 </body>
 </html>
